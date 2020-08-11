@@ -1,0 +1,88 @@
+:root {
+  --line-color: #999;
+}
+
+[data-component=app] {
+  display: flex;
+  width: calc(100vw - 30px);
+  justify-content: center;
+  border: 2px solid var(--line-color);
+  min-height: 50vh;
+  margin: 15px auto;
+}
+
+#folder-tree {
+  width: 30vw;
+  border-right: 2px solid var(--line-color);
+  color: #333;
+} 
+
+.folder-content-header {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 2px solid var(--line-color);
+} 
+
+.folder-content-header > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--line-color);
+}
+
+#folder-content {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+} 
+
+.name-column {
+  width: 60%;
+}
+
+.date-column {
+  width: 20%;
+}
+
+.size-column {
+  width: 15%;
+}
+
+.icon-column {
+  width: 5%;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  transition: height 600ms ease-out;
+  height: auto;
+}
+
+li.collapsed {
+  height: 55px;
+}
+
+ul {
+  display: flex;
+  padding-left: 10px;
+}
+
+#folder-tree > ul {
+  padding-right: 10px;
+  margin-top: 10px;
+}
+
+.hide {
+  display: none;
+}
